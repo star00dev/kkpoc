@@ -1,0 +1,19 @@
+version: '2.1'
+services:
+  web3tiers-registry:
+    image: stefanscherer/registry-windows
+    container_name: "${DockerRegistryImageName}"
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - regvolume:C:\registry
+
+volumes:
+  regvolume:
+
+networks:
+  default:
+    external:
+      name: ${InternalNetworkName}
+

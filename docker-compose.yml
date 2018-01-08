@@ -1,0 +1,49 @@
+version: '2.1'
+services:
+  sqlserver:
+    image: "${SQLInstanceName}"
+    container_name: "sqlserver"
+    build:
+      context: MSSQLServer
+      dockerfile: Dockerfile
+    ports:
+      - "60003:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - sa_password=Admin123
+    volumes:
+      - dataVolume:c:/SQLData
+  web3tiers-db:
+    image: "${DatabaseImageName}"
+    container_name: "web3tiers-db"
+    build:
+      context: Database
+      dockerfile: Dockerfile 
+    depends_on:
+      - sqlserver
+    environment:
+      - MessageConnectionString=${MessageConnectionString}
+  web3tiers-api:
+    image: "${ApiImageName}"
+    container_name: "web3tiers-api"
+    build:
+      context: WebService
+      dockerfile: Dockerfile
+    ports:
+      - "60002:80"
+    environment:
+      - MessageConnectionString=${MessageConnectionString}
+  web3tiers-ui:
+    image: "${WebUIImageName}"
+    container_name: "web3tiers-ui"
+    build:
+      context: WebUI
+      dockerfile: Dockerfile
+    ports:
+      - "60001:80"
+volumes:
+  dataVolume:
+networks:
+  default:
+    external:
+      name: ${InternalNetworkName}

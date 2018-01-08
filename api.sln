@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71} = {623F098B-806F-44DB-BA0E-B7C63B3ABC71}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1DD6584-511D-4BFB-B859-77C2E0EA9C36}"
+	ProjectSection(SolutionItems) = preProject
+		Build.ps1 = Build.ps1
+		Deploy.ps1 = Deploy.ps1
+		docker-compose.yml = docker-compose.yml
+		ReadMe.txt = ReadMe.txt
+		SetEnvVar.ps1 = SetEnvVar.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{E22E0100-721F-4D85-9375-D46FBAA92244}"
+	ProjectSection(ProjectDependencies) = postProject
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71} = {623F098B-806F-44DB-BA0E-B7C63B3ABC71}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Registry", "Registry", "{B861B1D5-9F5A-4BC1-BAD1-E92E65A126DF}"
+	ProjectSection(SolutionItems) = preProject
+		Registry\docker-registry.yml = Registry\docker-registry.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCore", "WebCore\WebCore.csproj", "{623F098B-806F-44DB-BA0E-B7C63B3ABC71}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Docker|Any CPU = Docker|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Docker|Any CPU.ActiveCfg = Docker|Any CPU
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Docker|Any CPU.Build.0 = Docker|Any CPU
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4549FF4C-EB37-4B4C-94A0-357A56D6E76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Docker|Any CPU.ActiveCfg = Docker|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Docker|Any CPU.Build.0 = Docker|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22E0100-721F-4D85-9375-D46FBAA92244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Docker|Any CPU.ActiveCfg = Debug|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Docker|Any CPU.Build.0 = Debug|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{623F098B-806F-44DB-BA0E-B7C63B3ABC71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B861B1D5-9F5A-4BC1-BAD1-E92E65A126DF} = {E1DD6584-511D-4BFB-B859-77C2E0EA9C36}
+	EndGlobalSection
+EndGlobal

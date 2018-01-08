@@ -1,0 +1,1 @@
+{  "registry-mirrors": [],  "insecure-registries": [    "172.16.110.115:5000"  ],  "debug": true,  "experimental": false,  "graph": "D:\\docker_data"}
